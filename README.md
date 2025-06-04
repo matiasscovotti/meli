@@ -17,7 +17,22 @@ npm install
 npm run dev
 ```
 
-Al abrir la aplicación podrás introducir tu `access_token`, ver el listado de productos definido en `frontend/data/products.json` y sincronizarlos con MercadoLibre. Para pruebas iniciales puedes utilizar un **token de testeo** generado con un usuario de prueba desde la consola de desarrolladores de MercadoLibre.
+Al abrir la aplicación podrás introducir tu `access_token`, ver el listado de productos definido en `frontend/data/products.json` y sincronizarlos con MercadoLibre. Para pruebas iniciales puedes utilizar un **token de testeo**.
+
+## Obtener un token de testeo
+
+1. Ingresa a la [consola de desarrolladores de MercadoLibre](https://developers.mercadolibre.com.ar/) y crea una aplicación si aún no la tienes.
+2. Dentro de tu aplicación genera un *usuario de prueba*.
+3. Con el `APP_ID` y `APP_SECRET` de tu aplicación solicita el token ejecutando:
+
+   ```bash
+   curl -X POST "https://api.mercadolibre.com/oauth/token" \
+     -d "grant_type=client_credentials" \
+     -d "client_id=APP_ID" \
+     -d "client_secret=APP_SECRET"
+   ```
+
+El comando devolverá un JSON con el campo `access_token` que podrás usar en esta aplicación o en el script CLI.
 
 ## Script de sincronización por CLI
 

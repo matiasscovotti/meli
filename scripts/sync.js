@@ -39,7 +39,7 @@ async function main() {
   const token = process.env.ML_ACCESS_TOKEN;
   if (!token) {
     console.error('ML_ACCESS_TOKEN environment variable is required.');
-    console.error('Obten un token de prueba desde la consola de desarrolladores');
+    console.error('Consulta el README para obtener un token de testeo.');
     process.exit(1);
   }
   const data = await fs.readFile('products.json', 'utf8');
