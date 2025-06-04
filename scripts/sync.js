@@ -1,5 +1,6 @@
 const fs = require('fs/promises');
-const API_BASE = 'https://api.mercadolibre.com';
+// You can point to the sandbox or production API
+const API_BASE = process.env.ML_API_BASE || 'https://api.mercadolibre.com';
 
 async function authHeaders(token) {
   return {
@@ -37,7 +38,8 @@ async function updateProduct(token, id, product) {
 async function main() {
   const token = process.env.ML_ACCESS_TOKEN;
   if (!token) {
-    console.error('ML_ACCESS_TOKEN environment variable is required');
+    console.error('ML_ACCESS_TOKEN environment variable is required.');
+    console.error('Obten un token de prueba desde la consola de desarrolladores');
     process.exit(1);
   }
   const data = await fs.readFile('products.json', 'utf8');

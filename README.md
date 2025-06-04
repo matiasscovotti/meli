@@ -17,17 +17,17 @@ npm install
 npm run dev
 ```
 
-Al abrir la aplicación podrás introducir tu `access_token`, ver el listado de productos definido en `frontend/data/products.json` y sincronizarlos con MercadoLibre.
+Al abrir la aplicación podrás introducir tu `access_token`, ver el listado de productos definido en `frontend/data/products.json` y sincronizarlos con MercadoLibre. Para pruebas iniciales puedes utilizar un **token de testeo** generado con un usuario de prueba desde la consola de desarrolladores de MercadoLibre.
 
 ## Script de sincronización por CLI
 
 Si prefieres ejecutar la sincronización desde la línea de comandos, puedes usar el script en `scripts/sync.js`:
 
 ```bash
-ML_ACCESS_TOKEN=token node scripts/sync.js
+ML_ACCESS_TOKEN=token_de_prueba node scripts/sync.js
 ```
 
-Recuerda que debes proporcionar tu `access_token` a través de la variable de entorno `ML_ACCESS_TOKEN`.
+Recuerda que debes proporcionar tu `access_token` (puede ser el token de testeo) a través de la variable de entorno `ML_ACCESS_TOKEN`.
 
 ## Notas
 
