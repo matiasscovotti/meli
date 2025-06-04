@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Sample Product",
+    "category_id": "MLA3530",
+    "price": 100.0,
+    "currency_id": "ARS",
+    "available_quantity": 10,
+    "buying_mode": "buy_it_now",
+    "listing_type_id": "gold_special",
+    "condition": "new",
+    "description": {
+      "plain_text": "Sample product description"
+    }
+  }
+]
